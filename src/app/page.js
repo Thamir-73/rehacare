@@ -47,9 +47,9 @@ export default function Home() {
       cta1: 'Book Now',
       cta2: 'Our Services',
       stats: {
-        players: 'Players',
-        courts: 'Courts',
-        tournaments: 'Tournaments',
+        players: 'Smiles',
+        courts: 'Specialized Doctors',
+        tournaments: 'Branches',
       }
     },
   };
@@ -57,34 +57,34 @@ export default function Home() {
   const isRTL = language === 'ar';
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-teal-50 via-white to-teal-100 dark:from-gray-900 dark:via-gray-800 dark:to-teal-900 ${isRTL ? 'rtl' : 'ltr'}`}>
-      <main className="container mx-auto px-4 py-5 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        <motion.div 
-          ref={contentRef}
-          className="bg-white bg-opacity-70 dark:bg-gray-800 dark:bg-opacity-70 p-6 md:p-8 rounded-2xl shadow-2xl mb-12 min-h-[70vh] flex flex-col justify-between relative overflow-hidden border border-teal-500 dark:border-teal-700"
+    <div className={`min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-100 dark:from-gray-900 dark:via-gray-800 dark:to-cyan-900 ${isRTL ? 'rtl' : 'ltr'}`}>
+    <main className="container mx-auto px-4 py-5 relative">
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <motion.div 
+        ref={contentRef}
+        className="bg-white bg-opacity-70 dark:bg-gray-800 dark:bg-opacity-70 p-6 md:p-8 rounded-2xl shadow-2xl mb-12 min-h-[70vh] flex flex-col justify-between relative overflow-hidden border border-cyan-500 dark:border-cyan-700"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Particles
+              <Particles
             className="absolute inset-0 z-0"
             quantity={100}
             staticity={50}
-            color="#14b8a6" // Teal color
+            color="#06b6d4" // Cyan color
           />
           <BorderBeam />
           
          
 
           <div className="flex flex-col items-center justify-between z-10 mb-8 mt-4">
-          <BlurIn
+            <BlurIn
               word={
-                <div className="text-center text-blue-800 dark:text-blue-200 w-full mb-8">  
-                 <h1 className="text-5xl md:text-6xl lg:text-7xl mb-4 bg-gray-600 text-transparent bg-clip-text drop-shadow-lg leading-tight md:leading-snug lg:leading-normal">
+                <div className="text-center text-blue-900 dark:text-blue-200 w-full mb-8">  
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl mb-4 bg-gradient-to-r from-blue-900 to-cyan-600 text-transparent bg-clip-text drop-shadow-lg leading-tight md:leading-snug lg:leading-normal">
                     {text[language].title}
                   </h1>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl mb-6 text-teal-400">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl mb-6 text-cyan-600">
                     <WordRotate 
                       words={text[language].subtitle}
                       duration={2000}
@@ -96,28 +96,28 @@ export default function Home() {
                       }}
                     />
                   </h2>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
-              <motion.button 
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
+                    <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-teal-500 w-1/2 lg:w-1/6 text-teal-600 px-6 py-3 text-lg md:text-xl rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center"
-              >
-                <AnimatedShinyText>{text[language].cta1}</AnimatedShinyText>
-                <FaCalendarAlt className="ml-0 text-teal-500" />
-              </motion.button>
-              <motion.button 
+                className="border border-cyan-600 w-1/2 lg:w-1/6 text-cyan-700 px-6 py-3 text-lg md:text-xl rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center"
+                >
+                  <AnimatedShinyText>{text[language].cta1}</AnimatedShinyText>
+                  <FaCalendarAlt className="ml-0 text-cyan-600" />
+                </motion.button>
+                <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-teal-700 w-1/2 lg:w-1/6 text-teal-700 px-6 py-3 text-lg md:text-xl rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center"
-              >
-                <AnimatedShinyText>{text[language].cta2}</AnimatedShinyText>
-                <GrNodes className="ml-0 text-teal-700" />
-              </motion.button>
-            </div>
+                className="border border-blue-800 w-1/2 lg:w-1/6 text-blue-800 px-6 py-3 text-lg md:text-xl rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center"
+                >
+                  <AnimatedShinyText>{text[language].cta2}</AnimatedShinyText>
+                  <GrNodes className="ml-0 text-blue-800" />
+                </motion.button>
               </div>
-            }
-className="w-full mb-2"
-/>
+            </div>
+          }
+          className="w-full mb-2"
+        />
             
             <BlurIn
               word={<PadelScoring />}
@@ -135,10 +135,10 @@ className="w-full mb-2"
               className="w-full"
             />
           </div>
-        </motion.div>
+          </motion.div>
 
-        <div className="mt-12">
-          <Marquee className="bg-white bg-opacity-70 dark:bg-gray-800 dark:bg-opacity-70 rounded-lg p-4 shadow-lg" pauseOnHover={true}>
+<div className="mt-12">
+  <Marquee className="bg-white bg-opacity-70 dark:bg-gray-800 dark:bg-opacity-70 rounded-lg p-4 shadow-lg" pauseOnHover={true}>
             <ReviewCard name="أحمد" text="تجربة رائعة!" />
             <ReviewCard name="فاطمة" text="أفضل عيادة  في الرياض" />
             <ReviewCard name="محمد" text="خدمة ممتازة وعالية الجودة" />
@@ -164,20 +164,20 @@ className="w-full mb-2"
 
 function StatCard({ number, text }) {
   return (
-    <div className="bg-teal-500 bg-opacity-10 dark:bg-opacity-30 p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow">
-      <h3 className="text-2xl md:text-3xl font-bold text-teal-700 dark:text-teal-300">
+    <div className="bg-cyan-500 bg-opacity-10 dark:bg-opacity-30 p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow">
+      <h3 className="text-2xl md:text-3xl font-bold text-blue-800 dark:text-cyan-300">
         <NumberTicker value={number} />+
       </h3>
-      <p className="text-sm md:text-base text-teal-600 font-semibold mt-2">{text}</p>
+      <p className="text-sm md:text-base text-cyan-700 font-semibold mt-2">{text}</p>
     </div>
   );
 }
 
 function ReviewCard({ name, text }) {
   return (
-    <div className="bg-teal-100 dark:bg-teal-900 p-3 rounded-lg mx-3 w-56 shadow-md hover:shadow-lg transition-shadow">
-      <p className="text-sm text-teal-800 dark:text-teal-200">{text}</p>
-      <p className="text-xs text-teal-600 dark:text-teal-400 mt-2">- {name}</p>
+    <div className="bg-cyan-100 dark:bg-cyan-900 p-3 rounded-lg mx-3 w-56 shadow-md hover:shadow-lg transition-shadow">
+      <p className="text-sm text-blue-800 dark:text-cyan-200">{text}</p>
+      <p className="text-xs text-cyan-700 dark:text-cyan-400 mt-2">- {name}</p>
     </div>
   );
 }
