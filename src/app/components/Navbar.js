@@ -90,13 +90,13 @@ export default function Navbar() {
         <div className="container px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <Image
-              src="/horii.png"
+              src="/hrr1.png"
               alt="Hori Logo"
               width={60}
               height={60}
               className="object-contain"
             />
-            <h2 className="font-bold ml-2 text-gray-300 text-xl">هورايزون</h2>
+            <h2 className="font-bold ml-0 text-gray-300 text-xl">د.هيفاء الراشد</h2>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
             <button 

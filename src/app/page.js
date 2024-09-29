@@ -81,7 +81,7 @@ export default function Home() {
             <BlurIn
               word={
                 <div className="text-center text-blue-900 dark:text-blue-200 w-full mb-8">  
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl mb-4 bg-gradient-to-r from-blue-900 to-cyan-600 text-transparent bg-clip-text drop-shadow-lg leading-tight md:leading-snug lg:leading-normal">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl mb-4 bg-gray-700 text-transparent bg-clip-text drop-shadow-lg leading-tight md:leading-snug lg:leading-normal">
                     {text[language].title}
                   </h1>
                   <h2 className="text-2xl md:text-3xl lg:text-4xl mb-6 text-cyan-600">
