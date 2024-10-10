@@ -50,7 +50,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage }) => {
       >
         {/* Before Image */}
         <img
-          src="/affde.jpg"
+          src="/doocc1.jpg"
           alt="Before"
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
@@ -61,7 +61,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage }) => {
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
           <img
-            src="/beffde.jpg"
+            src="/docc0.jpg.webp"
             alt="After"
             className="absolute top-0 left-0 w-full h-full object-cover"
           />
